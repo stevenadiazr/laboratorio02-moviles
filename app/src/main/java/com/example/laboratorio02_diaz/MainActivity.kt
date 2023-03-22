@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         bind()
-
+        setListener()
 
     }
 
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             val weight = weitghEditText.text.toString()
             val height  = heightEditText.text.toString()
 
-            if (validateInput(weight, height)){
+            if (!validateInput(weight, height)){
                 clearTextView()
                 return@setOnClickListener
             }
